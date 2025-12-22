@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Web To Case</title>
+  <title>Case Registration</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <div class="brand">Support Request</div>
-    <div class="tagline">Tell us how we can help</div>
+  <div class="wrapper">
+    <div class="brand">
+      <h1>🛠 Case Registration</h1>
+      <p>Tell us your issue</p>
+    </div>
 
     <form action="thankyou.html">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <textarea placeholder="Describe your issue"></textarea>
+      <label>Full Name</label>
+      <input type="text" required>
 
-      <button class="submit" type="submit">Submit Request</button>
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Phone</label>
+      <input type="tel">
+
+      <label>Description</label>
+      <textarea></textarea>
+
+      <button class="submit-btn">Submit Case</button>
     </form>
 
-    <a href="index.html" class="back">← Back to Home</a>
+    <a href="index.html" class="back">← Back</a>
   </div>
 </body>
 </html>
