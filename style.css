@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
@@ -14,91 +14,156 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80")
-    center / cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
 }
 
-/* DARK OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0,0,0,0.55), #000 70%);
+  background: rgba(0,0,0,0.75);
 }
 
-/* CENTER CONTENT */
-.content {
+.hero-content {
   position: relative;
   z-index: 2;
   height: 100%;
-  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
-  padding: 20px;
 }
 
-/* COMPANY NAME */
-h1 {
+.hero-content h1 {
   font-size: 64px;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  font-weight: 800;
 }
 
-.white {
-  color: #ffffff;
+.hero-content h1 span {
+  color: #00c8ff;
 }
 
-.blue {
-  color: #2ecbff;
-}
-
-/* TAGLINE */
-.tagline {
+.hero-content p {
+  margin-top: 15px;
   font-size: 18px;
-  line-height: 1.6;
   opacity: 0.9;
-  margin-bottom: 40px;
 }
 
-/* BUTTONS */
-.actions {
+.buttons {
+  margin-top: 35px;
   display: flex;
   gap: 25px;
 }
 
 .btn {
-  padding: 16px 34px;
+  padding: 15px 30px;
   border-radius: 14px;
   font-size: 18px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
+  color: white;
   transition: all 0.3s ease;
 }
 
-.lead {
-  background: #22c55e;
-  color: #fff;
+.btn.lead {
+  background: linear-gradient(135deg,#00c853,#00e676);
 }
 
-.case {
-  background: #3b82f6;
-  color: #fff;
+.btn.case {
+  background: linear-gradient(135deg,#2979ff,#00b0ff);
 }
 
 .btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,255,255,0.3);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 42px;
-  }
+/* FORM PAGE */
+.form-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#6a5acd,#8360c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .actions {
-    flex-direction: column;
-  }
+.form-box {
+  background: white;
+  padding: 40px;
+  width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ff4d4d;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.form-box button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#00b0ff,#2979ff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  opacity: 0.9;
+}
+
+/* THANK YOU PAGE */
+.thankyou {
+  min-height: 100vh;
+  background: #f4f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-card {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.thank-card h1 {
+  color: #2ecc71;
+}
+
+.thank-card p {
+  margin: 15px 0;
+}
+
+.thank-card a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #2ecc71;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
 }
