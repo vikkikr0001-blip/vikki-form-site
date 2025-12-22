@@ -2,60 +2,69 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  background: #050b1a;
-  overflow-x: hidden;
+  background: #000;
 }
 
 /* HERO SECTION */
 .hero {
+  position: relative;
   height: 100vh;
   width: 100%;
-  background: url("office.jpg") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80")
+    center / cover no-repeat;
 }
 
+/* DARK OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: radial-gradient(circle at center, rgba(0,0,0,0.55), #000 70%);
 }
 
-.hero-content {
+/* CENTER CONTENT */
+.content {
   position: relative;
-  text-align: center;
+  z-index: 2;
+  height: 100%;
   color: #fff;
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 20px;
 }
 
-.hero-content h1 {
+/* COMPANY NAME */
+h1 {
   font-size: 64px;
   letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
-.hero-content h1 span {
-  color: #00c6ff;
+.white {
+  color: #ffffff;
 }
 
+.blue {
+  color: #2ecbff;
+}
+
+/* TAGLINE */
 .tagline {
-  margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
   opacity: 0.9;
+  margin-bottom: 40px;
 }
 
 /* BUTTONS */
-.btn-group {
-  margin-top: 40px;
+.actions {
   display: flex;
-  justify-content: center;
   gap: 25px;
 }
 
@@ -68,41 +77,28 @@ body {
   transition: all 0.3s ease;
 }
 
-.btn.lead {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+.lead {
+  background: #22c55e;
   color: #fff;
 }
 
-.btn.case {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+.case {
+  background: #3b82f6;
   color: #fff;
 }
 
 .btn:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* CURSOR SMOKE */
-span {
-  position: fixed;
-  width: 14px;
-  height: 14px;
-  background: radial-gradient(circle, rgba(0,200,255,0.6), transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  animation: smokeFade 0.6s linear forwards;
-  z-index: 9999;
-}
-
-@keyframes smokeFade {
-  0% {
-    opacity: 1;
-    transform: scale(1);
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px;
   }
-  100% {
-    opacity: 0;
-    transform: scale(2.8);
+
+  .actions {
+    flex-direction: column;
   }
 }
