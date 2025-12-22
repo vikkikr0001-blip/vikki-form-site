@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Case Registration</title>
+  <title>Register Case</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="wrapper">
-    <div class="brand">
-      <h1>🛠 Case Registration</h1>
-      <p>Tell us your issue</p>
-    </div>
+<body class="form-page">
 
-    <form action="thankyou.html">
-      <label>Full Name</label>
-      <input type="text" required>
+<div class="form-box">
+  <h2>Support Case</h2>
 
-      <label>Email</label>
-      <input type="email" required>
+  <form action="thankyou.html">
+    <label>Name</label>
+    <input required>
 
-      <label>Phone</label>
-      <input type="tel">
+    <label>Email</label>
+    <input type="email" required>
 
-      <label>Description</label>
-      <textarea></textarea>
+    <label>Subject</label>
+    <input required>
 
-      <button class="submit-btn">Submit Case</button>
-    </form>
+    <label>Description</label>
+    <input required>
 
-    <a href="index.html" class="back">← Back</a>
-  </div>
+    <button type="submit">Submit Case</button>
+  </form>
+</div>
+
 </body>
 </html>
