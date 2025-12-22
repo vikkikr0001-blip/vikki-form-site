@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web To Case</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h2>Web To Case</h2>
+
+    <!-- Salesforce Web-to-Case code yahan paste hoga -->
+
+  </div>
+</body>
+</html>

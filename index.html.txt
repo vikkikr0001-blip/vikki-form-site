@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vikki Form Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h1>VIKKI PVT LTD</h1>
+    <p>Select Form Type</p>
+
+    <a href="lead.html" class="btn">Web To Lead</a>
+    <a href="case.html" class="btn">Web To Case</a>
+  </div>
+</body>
+</html>

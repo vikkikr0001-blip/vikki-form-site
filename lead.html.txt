@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web To Lead</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h2>Web To Lead</h2>
+
+    <!-- Salesforce Web-to-Lead code yahan paste hoga -->
+
+  </div>
+</body>
+</html>
