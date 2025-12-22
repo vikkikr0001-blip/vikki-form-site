@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>VIKKI PVT LTD</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO SECTION -->
   <section class="hero">
     <div class="overlay"></div>
 
-    <div class="hero-content">
-      <h1>VIKKI <span>PVT LTD</span></h1>
+    <div class="content">
+      <h1>
+        <span class="white">VIKKI</span>
+        <span class="blue">PVT LTD</span>
+      </h1>
+
       <p class="tagline">
         Create & manage Leads and Support Cases<br>
         with a professional workflow — just like Salesforce.
       </p>
 
-      <div class="btn-group">
+      <div class="actions">
         <a href="lead.html" class="btn lead">🚀 Register Lead</a>
         <a href="case.html" class="btn case">🛠 Register Case</a>
       </div>
     </div>
   </section>
-
-  <!-- CURSOR SMOKE EFFECT -->
-  <div id="cursor-smoke"></div>
-
-  <script>
-    document.addEventListener("mousemove", (e) => {
-      const smoke = document.createElement("span");
-      smoke.style.left = e.clientX + "px";
-      smoke.style.top = e.clientY + "px";
-      document.body.appendChild(smoke);
-
-      setTimeout(() => {
-        smoke.remove();
-      }, 600);
-    });
-  </script>
 
 </body>
 </html>
