@@ -3,43 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>VIKKI PVT LTD</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="overlay"></div>
+<section class="hero">
+  <div class="overlay"></div>
 
-    <div class="hero-content">
-      <h1>VIKKI <span>PVT LTD</span></h1>
-      <p class="tagline">
-        Create & manage Leads and Support Cases<br>
-        with a professional workflow — just like Salesforce.
-      </p>
+  <div class="hero-content">
+    <h1>VIKKI <span>PVT LTD</span></h1>
 
-      <div class="btn-group">
-        <a href="lead.html" class="btn lead">🚀 Register Lead</a>
-        <a href="case.html" class="btn case">🛠 Register Case</a>
-      </div>
+    <p class="tagline">
+      Create & manage Leads and Support Cases<br>
+      with a professional workflow — just like Salesforce
+    </p>
+
+    <div class="btn-group">
+      <a href="./lead.html" class="btn lead">🚀 Register Lead</a>
+      <a href="./case.html" class="btn case">🛠 Register Case</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CURSOR SMOKE EFFECT -->
-  <div id="cursor-smoke"></div>
-
-  <script>
-    document.addEventListener("mousemove", (e) => {
-      const smoke = document.createElement("span");
-      smoke.style.left = e.clientX + "px";
-      smoke.style.top = e.clientY + "px";
-      document.body.appendChild(smoke);
-
-      setTimeout(() => {
-        smoke.remove();
-      }, 600);
-    });
-  </script>
+<script>
+document.addEventListener("mousemove", e => {
+  const s = document.createElement("span");
+  s.style.left = e.clientX + "px";
+  s.style.top = e.clientY + "px";
+  document.body.appendChild(s);
+  setTimeout(() => s.remove(), 600);
+});
+</script>
 
 </body>
 </html>
