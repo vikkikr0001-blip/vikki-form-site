@@ -2,100 +2,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-/* FULL SCREEN HERO */
-.hero {
-  position: relative;
+body {
   height: 100vh;
-  width: 100%;
-  background: url("office.jpg") center/cover no-repeat;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* DARK OVERLAY */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 10, 25, 0.75);
-}
-
-/* CENTER CONTENT */
-.content {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-}
-
-/* COMPANY NAME */
-.brand {
-  font-size: 56px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 12px;
-}
-
-.brand span {
-  color: #38bdf8;
-}
-
-/* TAGLINE */
-.tagline {
-  font-size: 18px;
-  color: #cbd5f5;
-  margin-bottom: 40px;
-}
-
-/* BUTTON AREA */
-.actions {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* BUTTON BASE */
-.btn {
-  padding: 16px 34px;
+.main-box {
+  background: #1f2937;
+  padding: 40px;
   border-radius: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-/* LEAD BUTTON */
-.btn.lead {
+.main-box h1 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.main-box p {
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: block;
   background: #22c55e;
-  color: #032e15;
-}
-
-/* CASE BUTTON */
-.btn.case {
-  background: #3b82f6;
-  color: #021a33;
-}
-
-/* HOVER SMOKE / GLOW EFFECT */
-.btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.35), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.btn:hover::after {
-  opacity: 1;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 25px rgba(255,255,255,0.35);
+  background: #16a34a;
 }
