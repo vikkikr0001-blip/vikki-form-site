@@ -1,32 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Register Lead</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Lead Registration</title>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(135deg,#6a5acd,#7f5cff);
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .form-box{
+        background:#fff;
+        width:420px;
+        padding:35px 30px;
+        border-radius:18px;
+        box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    h2{
+        text-align:center;
+        color:#ff4d4d;
+        margin-bottom:25px;
+        font-size:26px;
+    }
+
+    label{
+        display:block;
+        margin-top:15px;
+        font-size:14px;
+        color:#333;
+    }
+
+    input, select{
+        width:100%;
+        padding:12px 14px;
+        margin-top:6px;
+        border-radius:10px;
+        border:1px solid #ddd;
+        font-size:14px;
+        outline:none;
+    }
+
+    input:focus, select:focus{
+        border-color:#7f5cff;
+    }
+
+    button{
+        width:100%;
+        margin-top:30px;
+        padding:14px;
+        border:none;
+        border-radius:14px;
+        background:linear-gradient(90deg,#00c6ff,#0072ff);
+        color:#fff;
+        font-size:16px;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    button:hover{
+        opacity:0.9;
+    }
+</style>
 </head>
-<body class="form-page">
+
+<body>
 
 <div class="form-box">
-  <h2>Lead Registration</h2>
+<h2>Lead Registration</h2>
 
-  <form action="thankyou.html">
-    <label>First Name</label>
-    <input required>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL000008V6z4" method="POST">
 
-    <label>Last Name</label>
-    <input required>
+<input type="hidden" name="oid" value="00DgL000008V6z4">
+<input type="hidden" name="retURL" value="https://vikkikr0001-blip.github.io/vikki-form-site/index.html">
 
-    <label>Email</label>
-    <input type="email" required>
+<label>First Name</label>
+<input type="text" name="first_name" maxlength="40" required>
 
-    <label>Company</label>
-    <input>
+<label>Last Name</label>
+<input type="text" name="last_name" maxlength="80" required>
 
-    <label>City</label>
-    <input>
+<label>Email</label>
+<input type="email" name="email" maxlength="80" required>
 
-    <button type="submit">Submit Lead</button>
-  </form>
+<label>Company</label>
+<input type="text" name="company" maxlength="40" required>
+
+<label>City</label>
+<input type="text" name="city" maxlength="40">
+
+<label>Country</label>
+<select name="country_code">
+<option value="">--Select Country--</option>
+<option value="IN">India</option>
+<option value="US">United States</option>
+<option value="GB">United Kingdom</option>
+<option value="CA">Canada</option>
+<option value="AU">Australia</option>
+</select>
+
+<button type="submit">Submit Lead</button>
+
+</form>
 </div>
 
 </body>
