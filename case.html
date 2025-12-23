@@ -1,29 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Register Case</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Create Support Case</title>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .case-box{
+        background:#ffffff;
+        width:450px;
+        padding:35px 30px;
+        border-radius:18px;
+        box-shadow:0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    h2{
+        text-align:center;
+        color:#2563eb;
+        margin-bottom:25px;
+        font-size:26px;
+    }
+
+    label{
+        display:block;
+        margin-top:15px;
+        font-size:14px;
+        color:#333;
+        font-weight:600;
+    }
+
+    input, textarea{
+        width:100%;
+        padding:12px 14px;
+        margin-top:6px;
+        border-radius:10px;
+        border:1px solid #ddd;
+        font-size:14px;
+        outline:none;
+    }
+
+    textarea{
+        resize:none;
+        height:100px;
+    }
+
+    input:focus, textarea:focus{
+        border-color:#2563eb;
+    }
+
+    button{
+        width:100%;
+        margin-top:30px;
+        padding:14px;
+        border:none;
+        border-radius:14px;
+        background:linear-gradient(90deg,#2563eb,#1e40af);
+        color:#fff;
+        font-size:16px;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    button:hover{
+        opacity:0.9;
+    }
+</style>
 </head>
-<body class="form-page">
 
-<div class="form-box">
-  <h2>Support Case</h2>
+<body>
 
-  <form action="thankyou.html">
-    <label>Name</label>
-    <input required>
+<div class="case-box">
+<h2>Create Support Case</h2>
 
-    <label>Email</label>
-    <input type="email" required>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000008V6z4" method="POST">
 
-    <label>Subject</label>
-    <input required>
+<input type="hidden" name="orgid" value="00DgL000008V6z4">
+<input type="hidden" name="retURL" value="https://vikkikr0001-blip.github.io/vikki-form-site/index.html">
+<input type="hidden" name="external" value="1">
 
-    <label>Description</label>
-    <input required>
+<label>Contact Name</label>
+<input type="text" name="name" maxlength="80" required>
 
-    <button type="submit">Submit Case</button>
-  </form>
+<label>Email</label>
+<input type="email" name="email" maxlength="80" required>
+
+<label>Phone</label>
+<input type="text" name="phone" maxlength="40">
+
+<label>Subject</label>
+<input type="text" name="subject" maxlength="80" required>
+
+<label>Description</label>
+<textarea name="description" required></textarea>
+
+<button type="submit">Submit Case</button>
+
+</form>
 </div>
 
 </body>
