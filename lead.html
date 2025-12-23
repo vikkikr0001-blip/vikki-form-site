@@ -9,21 +9,20 @@
 <style>
     body{
         margin:0;
-        padding:0;
         min-height:100vh;
         display:flex;
-        align-items:center;
         justify-content:center;
-        background:linear-gradient(135deg,#6a5acd,#7f5cff);
+        align-items:center;
+        background:linear-gradient(135deg,#6a5acd,#8f6bff);
         font-family:Arial, Helvetica, sans-serif;
     }
 
-    .form-box{
-        background:#fff;
+    .form-container{
+        background:#ffffff;
         width:420px;
         padding:35px 30px;
-        border-radius:18px;
-        box-shadow:0 20px 40px rgba(0,0,0,0.25);
+        border-radius:20px;
+        box-shadow:0 25px 45px rgba(0,0,0,0.25);
     }
 
     h2{
@@ -35,7 +34,7 @@
 
     label{
         display:block;
-        margin-top:15px;
+        margin-top:14px;
         font-size:14px;
         color:#333;
     }
@@ -75,7 +74,7 @@
 
 <body>
 
-<div class="form-box">
+<div class="form-container">
 <h2>Lead Registration</h2>
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL000008V6z4" method="POST">
@@ -100,12 +99,12 @@
 
 <label>Country</label>
 <select name="country_code">
-<option value="">--Select Country--</option>
-<option value="IN">India</option>
-<option value="US">United States</option>
-<option value="GB">United Kingdom</option>
-<option value="CA">Canada</option>
-<option value="AU">Australia</option>
+    <option value="">-- Select Country --</option>
+    <option value="IN">India</option>
+    <option value="US">United States</option>
+    <option value="GB">United Kingdom</option>
+    <option value="CA">Canada</option>
+    <option value="AU">Australia</option>
 </select>
 
 <button type="submit">Submit Lead</button>
